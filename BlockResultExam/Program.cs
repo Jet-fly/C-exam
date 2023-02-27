@@ -2,7 +2,7 @@
 string? str = Console.ReadLine();
 
 // Делим введённые данные на массив строк.
-char[] delimeters = {' ', ',', '.'};
+char[] delimeters = { ' ', ',', '.' };
 string[] strArray = str.Split(delimeters, StringSplitOptions.RemoveEmptyEntries);
 
 // Выводим массив и сразу считаем количество искомых элементов.
@@ -28,7 +28,11 @@ for (int i = 0; i < strArray.Length; i++)
 }
 
 // Выводим новый массив.
-for (int i = 0; i < newArray.Length; i++)
+if (k != 0)
 {
-    System.Console.Write($"[{newArray[i]}]" + " ");
+    for (int i = 0; i < newArray.Length; i++)
+    {
+        System.Console.Write($"[{newArray[i]}]" + " ");
+    }
 }
+else System.Console.WriteLine("No elements");
