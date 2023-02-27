@@ -3,11 +3,11 @@ string? str = Console.ReadLine();
 
 // Делим введённые данные на массив строк.
 char[] delimeters = { ' ', ',', '.' };
-string[] strArray = str.Split(delimeters, StringSplitOptions.RemoveEmptyEntries);
+string[]? strArray = str?.Split(delimeters, StringSplitOptions.RemoveEmptyEntries);
 
 // Выводим массив и сразу считаем количество искомых элементов.
 int count = 0;
-for (int i = 0; i < strArray.Length; i++)
+for (int i = 0; i < strArray?.Length; i++)
 {
     if (strArray[i].Length <= 3)
         count++;
@@ -18,7 +18,7 @@ System.Console.WriteLine();
 // Описываем новый массив и заводим счетчик для второго массива.
 string[] newArray = new string[count];
 int k = 0;
-for (int i = 0; i < strArray.Length; i++)
+for (int i = 0; i < strArray?.Length; i++)
 {
     if (strArray[i].Length <= 3)
     {
